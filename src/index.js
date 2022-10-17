@@ -11,6 +11,12 @@ import {
 const DEBOUNCE_DELAY = 300;
 const inputRef = document.querySelector('#search-box');
 
+const notifyOptions = {
+  position: 'center-top',
+  backOverlay: true,
+  clickToClose: true,
+};
+
 inputRef.addEventListener('input', debounce(searchCountry, DEBOUNCE_DELAY));
 
 function searchCountry(event) {
@@ -26,12 +32,15 @@ function searchCountry(event) {
 }
 
 function onError() {
-  Notify.failure('Oops, there is no country with that name');
+  Notify.failure('Oops, there is no country with that name', notifyOptions);
 }
 
 function onSuccess(data) {
   if (data.length > 10) {
-    Notify.info('Too many matches found. Please enter a more specific name.');
+    Notify.info(
+      'Too many matches found. Please enter a more specific name.',
+      notifyOptions
+    );
     return;
   } else if (data.length === 1) {
     createMarkup(data);
