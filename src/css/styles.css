@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #212121;
+  line-height: 1.5;
+}
+
+#search-box {
+  font: inherit;
+  padding: 8px;
+  max-width: 320px;
+  margin-bottom: 16px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.country-list-item {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(231, 231, 231, 0.808);
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.country-list-text {
+  font-size: 18px;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.country-title {
+  margin: 0 0 0 10px;
+  font-size: 30px;
+}
+.country-info-wrapper {
+  width: 350px;
+  height: auto;
+  background-color: rgba(231, 231, 231, 0.808);
+  border-radius: 15px;
+  padding: 20px;
+}
+.country-info-list {
+  display: flex;
+  align-items: baseline;
+}
+
+.coutry-info-text {
+  font-size: 18px;
+}
